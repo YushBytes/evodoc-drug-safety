@@ -1,0 +1,81 @@
+{
+  "interactions": [
+    {
+      "drugs": ["warfarin", "aspirin"],
+      "severity": "high",
+      "mechanism": "Both inhibit platelet function and increase bleeding risk",
+      "clinical_recommendation": "Avoid combination. If necessary, monitor INR closely.",
+      "source_confidence": "high"
+    },
+    {
+      "drugs": ["warfarin", "ibuprofen"],
+      "severity": "high",
+      "mechanism": "NSAIDs inhibit platelet aggregation and may displace warfarin",
+      "clinical_recommendation": "Avoid. Use paracetamol if pain relief needed.",
+      "source_confidence": "high"
+    },
+    {
+      "drugs": ["metformin", "contrast dye"],
+      "severity": "high",
+      "mechanism": "Risk of lactic acidosis with iodinated contrast",
+      "clinical_recommendation": "Hold metformin 48 hours before contrast procedures.",
+      "source_confidence": "high"
+    },
+    {
+      "drugs": ["ssri", "tramadol"],
+      "severity": "high",
+      "mechanism": "Risk of serotonin syndrome",
+      "clinical_recommendation": "Avoid combination. Monitor for serotonin syndrome signs.",
+      "source_confidence": "high"
+    },
+    {
+      "drugs": ["ace inhibitor", "potassium"],
+      "severity": "medium",
+      "mechanism": "ACE inhibitors increase potassium retention",
+      "clinical_recommendation": "Monitor serum potassium levels regularly.",
+      "source_confidence": "high"
+    },
+    {
+      "drugs": ["ciprofloxacin", "antacid"],
+      "severity": "medium",
+      "mechanism": "Antacids reduce ciprofloxacin absorption by chelation",
+      "clinical_recommendation": "Separate administration by at least 2 hours.",
+      "source_confidence": "high"
+    }
+  ],
+
+  "allergy_classes": {
+    "penicillin": ["amoxicillin", "ampicillin", "flucloxacillin", "co-amoxiclav"],
+    "sulfa": ["sulfamethoxazole", "trimethoprim-sulfamethoxazole", "furosemide"],
+    "nsaid": ["ibuprofen", "naproxen", "diclofenac", "aspirin", "indomethacin"],
+    "cephalosporin": ["cefalexin", "cefuroxime", "ceftriaxone"],
+    "fluoroquinolone": ["ciprofloxacin", "levofloxacin", "moxifloxacin"]
+  },
+
+  "condition_contraindications": {
+    "kidney disease": {
+      "drugs": ["nsaid", "ibuprofen", "naproxen", "metformin", "gentamicin"],
+      "severity": "high",
+      "mechanism": "Nephrotoxic or renally cleared drugs dangerous in kidney disease",
+      "clinical_recommendation": "Avoid or adjust dose. Monitor kidney function closely."
+    },
+    "liver disease": {
+      "drugs": ["paracetamol", "statins", "isoniazid"],
+      "severity": "high",
+      "mechanism": "Hepatotoxic drugs dangerous in liver disease",
+      "clinical_recommendation": "Avoid high doses. Monitor liver enzymes."
+    },
+    "heart failure": {
+      "drugs": ["nsaid", "ibuprofen", "verapamil", "diltiazem"],
+      "severity": "high",
+      "mechanism": "Can worsen heart failure or cause fluid retention",
+      "clinical_recommendation": "Avoid NSAIDs. Monitor fluid status."
+    },
+    "pregnancy": {
+      "drugs": ["nsaid", "ace inhibitor", "warfarin", "tetracycline", "isotretinoin"],
+      "severity": "critical",
+      "mechanism": "Teratogenic or harmful to fetus",
+      "clinical_recommendation": "Contraindicated. Use safer alternatives."
+    }
+  }
+}
